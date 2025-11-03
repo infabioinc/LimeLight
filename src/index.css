@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#FFFDF7] text-[#2B2B2B];
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    @apply text-[#1C1C1C];
+  }
+
+  /* Links */
+  a {
+    @apply text-[#C59D2F] hover:text-[#D4AF37] transition-colors;
+  }
+
+  /* Buttons (you can apply className="btn-primary" to use this base) */
+  .btn-primary {
+    @apply px-5 py-2.5 rounded-lg font-medium text-white shadow-md transition-colors;
+    background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.1);
+  }
+}
+
+@layer utilities {
+  /* --- Gradients --- */
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+  }
+
+  .gold-text-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* --- Animations --- */
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.8s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* --- Shadows --- */
+  .shadow-gold {
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+}
