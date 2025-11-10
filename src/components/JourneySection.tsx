@@ -1542,7 +1542,7 @@ function Footer() {
                 className="rounded-md px-1.5 py-1 border border-white/20 flex items-center gap-1.5"
               >
                 <motion.a 
-                  href="https://play.fabulousmedia.in" 
+                  href="https://fabulousmedia.in" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white rounded p-0.5 opacity-60 hover:opacity-100 transition-opacity flex items-center justify-center"
